@@ -1,59 +1,55 @@
 # claude-proposal-writer
 
-یک [Claude Code Skill](https://docs.claude.com/en/docs/claude-code/skills) برای نوشتنِ **پروپوزال‌های فارسیِ برنده** — به‌ویژه برای خدماتِ هوش مصنوعی، نرم‌افزار، وب و مشاوره. خروجی، یک پروپوزالِ ساختارمندِ ۱۲ بخشی (RTL) است که به‌جای فروشِ ابزار، از مشکل و ارزشِ کلاینت شروع می‌کند.
+A [Claude Code Skill](https://docs.claude.com/en/docs/claude-code/skills) for writing **client-winning business proposals in English**, especially for AI, software, web, and consulting services. The output is a structured 12-section proposal (LTR) that starts from the client's problem and value instead of selling the tools.
 
-> A Claude Code Skill for writing client-winning business proposals in Persian/Farsi (RTL), especially for AI, software, web, and consulting services.
+## What it does
 
-## چه می‌کند
+Built on a proven proposal-writing methodology, embedding these principles:
 
-بر پایه‌ی متدولوژیِ اثبات‌شده‌ی نوشتنِ پروپوزال ساخته شده و این اصول را نهادینه می‌کند:
+- **Three golden rules:** write about the client, not yourself; sell the outcome, not the tool; stay short and clear.
+- **12-section framework:** executive summary, understanding of the situation, solution, scope (included/excluded), timeline, value/ROI, investment, and next step.
+- **Automatic self-review** against an 8-item checklist of common mistakes.
+- **Clean PDF output** with a professional color palette (navy/gold/teal).
 
-- **سه قانون طلایی:** درباره‌ی کلاینت بنویس نه خودت، نتیجه بفروش نه ابزار، کوتاه و شفاف بمان.
-- **چارچوب ۱۲ بخشی:** خلاصه‌ی اجرایی، درکِ وضعیت، راه‌حل، دامنه (شامل/غیرشامل)، زمان‌بندی، ارزش/ROI، سرمایه‌گذاری، و قدم بعدی.
-- **بازبینیِ خودکار** بر اساس چک‌لیستِ ۸ اشتباهِ رایج.
-- **خروجی PDF فارسیِ راست‌به‌چپ** با فونتِ جاسازی‌شده‌ی **Vazirmatn** و پالتِ رنگیِ حرفه‌ای (سرمه‌ای/طلایی/فیروزه‌ای).
+## Install
 
-## نصب
-
-این ریپو را در پوشه‌ی skillهای Claude Code کپی کنید:
+Clone this repo into your Claude Code skills folder:
 
 ```bash
-# سطح پروژه
-git clone https://github.com/Far26had/claude-proposal-writer .claude/skills/proposal-writer
+# project level
+git clone https://github.com/aalborz/claude-proposal-writer .claude/skills/proposal-writer
 
-# یا سطح کاربر (همه‌ی پروژه‌ها)
-git clone https://github.com/Far26had/claude-proposal-writer ~/.claude/skills/proposal-writer
+# or user level (all projects)
+git clone https://github.com/aalborz/claude-proposal-writer ~/.claude/skills/proposal-writer
 ```
 
-سپس در Claude Code کافی است بگویید: «یک پروپوزال برای [کلاینت] بنویس» — اسکیل خودکار فعال می‌شود.
+Then in Claude Code, just say: "write a proposal for [client]" — the skill activates automatically.
 
-## ساختار
+## Structure
 
-| مسیر | توضیح |
+| Path | Description |
 |---|---|
-| `SKILL.md` | دستورالعمل اصلی: قوانین، گردش کار، و جدولِ ۱۲ بخش |
-| `references/methodology.md` | راهنمای تفصیلیِ هر بخش + اشتباهات رایج + چک‌لیست |
-| `references/example-proposal.md` | نمونه‌ی کاملِ مرجع (وب‌سایت + دستیار هوشمند) |
-| `scripts/md_to_pdf.py` | تبدیلِ پروپوزالِ Markdown به PDF فارسیِ RTL |
-| `examples/` | دو نمونه‌ی تولیدشده (فروشگاه اینترنتی، کلینیک درمانی) |
+| `SKILL.md` | Core instructions: rules, workflow, and the 12-section table |
+| `references/methodology.md` | Detailed guide for each section + common mistakes + checklist |
+| `references/example-proposal.md` | A complete reference example (website + AI assistant) |
+| `scripts/md_to_pdf.py` | Converts a Markdown proposal to PDF |
+| `examples/` | Two generated examples (online store, medical clinic) |
 
-## ساخت PDF
+## Building a PDF
 
 ```bash
-pip install markdown          # نیازمندی
+pip install markdown          # requirement
 python scripts/md_to_pdf.py examples/proposal-clinic.md
 ```
 
-اسکریپت، Markdown را به HTMLِ استایل‌دارِ RTL تبدیل و با Chrome یا Edge (حالت headless) چاپ می‌کند. فونتِ Vazirmatn به‌صورت base64 در خروجی جاسازی می‌شود، پس نیازی به نصبِ فونت روی سیستم نیست. فقط به Chrome یا Edge نیاز دارد.
+The script converts Markdown into styled HTML and prints it with headless Chrome or Edge. Only Chrome or Edge is required.
 
-رنگ‌های سازمانی در بالای `scripts/md_to_pdf.py` به‌صورت متغیر تعریف شده‌اند؛ برای برندِ دیگر کافی است همان مقادیر hex را عوض کنید.
+Brand colors are defined as variables at the top of `scripts/md_to_pdf.py`; to use a different brand, just swap the hex values.
 
-> فونتِ Vazirmatn تحت مجوز [SIL Open Font License 1.1](scripts/fonts/OFL.txt) بازتوزیع شده است.
+## Credit
 
-## اعتبار
+Methodology adapted from the [Careerpreneur Academy](https://careerpreneuracademy.com/proposal-writing.html) proposal-writing guide — AI Consultant course.
 
-متدولوژی برگرفته از راهنمای نوشتنِ پروپوزالِ [Careerpreneur Academy](https://careerpreneuracademy.com/proposal-writing.html) — دوره مشاور هوش مصنوعی.
-
-## مجوز
+## License
 
 [MIT](LICENSE)

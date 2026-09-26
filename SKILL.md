@@ -1,69 +1,69 @@
 ---
 name: proposal-writer
-description: Write client-winning business proposals in Persian/Farsi (RTL), especially for AI, software, web, and consulting services. Use whenever the user wants to create, draft, write, or improve a "پروپوزال", "proposal", "پیشنهاد همکاری", "پیشنهاد قیمت", or a client-facing offer. Produces a structured 12-section proposal that leads with the client's problem and value, not the tools.
+description: Write client-winning business proposals in English, especially for AI, software, web, and consulting services. Use whenever the user wants to create, draft, write, or improve a "proposal", "quote", "statement of work", "SOW", or a client-facing offer. Produces a structured 12-section proposal that leads with the client's problem and value, not the tools.
 ---
 
-# Proposal Writer — نوشتن پروپوزالِ برنده
+# Proposal Writer — Writing a Winning Proposal
 
-هدف این اسکیل: ساختنِ پروپوزالی که کلاینت را به «بله» برساند. پروپوزال، پلِ بین جلسه‌ی فروش و قرارداد است — نه رزومه‌ی فنیِ تو.
+The goal of this skill: build a proposal that gets the client to "yes." A proposal is the bridge between the sales conversation and the signed contract — not your technical resume.
 
-## سه قانون طلایی (هرگز نقض نکن)
+## Three Golden Rules (never break these)
 
-1. **درباره‌ی کلاینت بنویس، نه درباره‌ی خودت.** تمرکز روی مشکل و نتیجه‌ی اوست، نه توانایی‌های فنی تو.
-2. **نتیجه بفروش، نه ابزار.** کلاینت «چت‌بات» نمی‌خرد؛ او «۳ ساعت وقتِ آزاد در روز» و «سرنخِ بیشتر» می‌خرد. کلمه‌های فنی (RAG، embedding، API) را کنار بگذار مگر کلاینت خودش فنی باشد.
-3. **کوتاه و شفاف.** برای کسب‌وکارهای کوچک ۲ تا ۴ صفحه کافی است. پروپوزالِ طولانی خوانده نمی‌شود.
+1. **Write about the client, not about yourself.** Focus on their problem and their outcome, not your technical capabilities.
+2. **Sell the outcome, not the tool.** The client isn't buying a "chatbot"; they're buying "3 free hours a day" and "more leads." Drop technical jargon (RAG, embeddings, API) unless the client is technical themselves.
+3. **Keep it short and clear.** For small businesses, 2-4 pages is enough. A long proposal doesn't get read.
 
-## گردش کار
+## Workflow
 
-### گام ۱ — جمع‌آوری اطلاعات (قبل از نوشتن بپرس)
-اگر کاربر این‌ها را نداده، قبل از نوشتن بپرس. بدون این‌ها پروپوزال کلی و بی‌اثر می‌شود:
-- نام کلاینت / شرکت و نام مخاطب اصلی
-- مشکل یا نیازِ اصلیِ کلاینت (با کلمات و اعداد خودِ او — «روزی ۳ ساعت»، «۲۰٪ سرنخ از دست می‌رود»)
-- چه چیزی می‌سازی / ارائه می‌دهی (دامنه‌ی کار)
-- بودجه / قیمت و شرایط پرداخت
-- زمان‌بندی تقریبی
-- نام برند/شرکتِ خودِ کاربر و اطلاعات تماس
+### Step 1 — Gather information (ask before writing)
+If the user hasn't given you these, ask before writing. Without them the proposal comes out generic and ineffective:
+- Client name / company and the main point of contact
+- The client's core problem or need (in their own words and numbers — "3 hours a day," "losing 20% of leads")
+- What you're building / delivering (scope of work)
+- Budget / price and payment terms
+- Rough timeline
+- The user's own brand/company name and contact info
 
-اگر بعضی موارد نامشخص است، فرضِ منطقی بگذار و آن را با `[...]` علامت بزن تا کاربر پرش کند — بی‌جهت کار را متوقف نکن.
+If some details are unclear, make a reasonable assumption and mark it with `[...]` so the user can fill it in later — don't stall the work over it.
 
-### گام ۲ — نوشتن ۱۲ بخش
-`references/methodology.md` را بخوان و برای راهنمایِ تفصیلی و لحنِ هر بخش از آن پیروی کن. ساختار:
+### Step 2 — Write the 12 sections
+Read `references/methodology.md` and follow it for detailed guidance and tone for each section. Structure:
 
-| # | بخش | ضروری؟ |
+| # | Section | Required? |
 |---|---|---|
-| ۱ | سربرگ و مشخصات پایه (عنوان، طرفین، تاریخ، تاریخ انقضا) | |
-| ۲ | خلاصه‌ی اجرایی — ۳ تا ۴ جمله: مشکل ← راه‌حل ← نتیجه‌ی اصلی | ★ |
-| ۳ | درک ما از وضعیت شما — مشکلات کلاینت را با زبانِ خودش بازتاب بده | ★ |
-| ۴ | راه‌حل پیشنهادی — ساده، بدون اصطلاح فنی سنگین | ★ |
-| ۵ | دامنه‌ی کار (شامل ✅ / غیرشامل ⛔) | ★ |
-| ۶ | مراحل و زمان‌بندی — جدولِ فاز/کار/مدت | ★ |
-| ۷ | نتایج و ارزش مورد انتظار — با زبانِ پول و زمان + ROI ساده | ★ |
-| ۸ | سرمایه‌گذاری و شرایط پرداخت — قیمت *بعد از* اثباتِ ارزش | ★ |
-| ۹ | آنچه از شما نیاز داریم — دسترسی، محتوا، رابط | |
-| ۱۰ | درباره‌ی ما — اعتبار کوتاه، نتیجه‌محور | |
-| ۱۱ | شرایط و اعتبار پیشنهاد — انقضا، تعداد بازنگری، مالکیت | |
-| ۱۲ | قدم بعدی و پذیرش — «بله گفتن» را آسان کن | ★ |
+| 1 | Header and basic details (title, parties, date, expiration date) | |
+| 2 | Executive summary — 3-4 sentences: problem → solution → main outcome | ★ |
+| 3 | Our understanding of your situation — reflect the client's problems back in their own words | ★ |
+| 4 | Proposed solution — simple, without heavy technical jargon | ★ |
+| 5 | Scope of work (included ✅ / not included ⛔) | ★ |
+| 6 | Phases and timeline — phase/task/duration table | ★ |
+| 7 | Expected results and value — in terms of money and time + simple ROI | ★ |
+| 8 | Investment and payment terms — price comes *after* value is proven | ★ |
+| 9 | What we need from you — access, content, point of contact | |
+| 10 | About us — brief, results-focused credibility | |
+| 11 | Terms and offer validity — expiration, number of revisions, ownership | |
+| 12 | Next step and acceptance — make saying "yes" easy | ★ |
 
-بخش‌های ★ برای هر پروپوزالی ضروری‌اند. برای پروژه‌های کوچک، بخش‌های غیرضروری را می‌توان کوتاه یا ادغام کرد.
+★ sections are required for every proposal. For small projects, non-required sections can be shortened or merged.
 
-### گام ۳ — بازبینیِ نهایی
-پیش از تحویل، `references/methodology.md` بخش «اشتباهات رایج» را چک کن. مطمئن شو:
-- خلاصه‌ی اجرایی خودکفاست (اگر کسی فقط همان را بخواند، پیام را می‌گیرد).
-- قیمت بعد از ارزش آمده، نه قبل از آن.
-- دامنه‌ی کار مرزِ روشن دارد (شامل/غیرشامل).
-- قدم بعدی یک اقدامِ مشخص و ساده است، نه پایانِ مبهم.
-- کلمه‌ی «سرمایه‌گذاری» به‌جای «هزینه» به‌کار رفته.
+### Step 3 — Final review
+Before delivery, check the "Common Mistakes" section in `references/methodology.md`. Make sure:
+- The executive summary is self-contained (if someone reads only that, they get the message).
+- The price comes after the value, not before it.
+- The scope of work has a clear boundary (included/not included).
+- The next step is a specific, simple action, not a vague ending.
+- The word "investment" is used instead of "cost."
 
-## قالب و زبان
+## Format and language
 
-- خروجی به‌صورت پیش‌فرض **فارسی و راست‌به‌چپ (RTL)** است، مگر کاربر خلافش را بخواهد.
-- خروجی را در یک فایل Markdown بنویس (مثلاً `proposal-[client].md`).
-- برای تحویلِ رسمی به کارفرما، فایل را به **PDF فارسیِ راست‌به‌چپ** تبدیل کن:
+- Output defaults to **English, left-to-right (LTR)**, unless the user asks otherwise.
+- Write the output as a Markdown file (e.g. `proposal-[client].md`).
+- For formal delivery to the client, convert the file to **PDF**:
   `python .claude/skills/proposal-writer/scripts/md_to_pdf.py proposal-[client].md`
-  این اسکریپت Markdown را به HTMLِ استایل‌دارِ RTL تبدیل و با Chrome/Edge headless چاپ می‌کند (نیاز: `pip install markdown` و نصب Chrome یا Edge). برای Word از اسکیل `docx` استفاده کن.
-- لحن: حرفه‌ای اما ساده و انسانی. بدون وعده‌ی اغراق‌آمیز، بدون واژه‌های شرکتیِ توخالی.
-- تاریخ انقضا روی سربرگ فشارِ ملایمِ زمانی ایجاد می‌کند — همیشه بگذار.
+  This script converts the Markdown into styled HTML and prints it with headless Chrome/Edge (requires: `pip install markdown` and Chrome or Edge installed). For Word output, use the `docx` skill.
+- Tone: professional but plain and human. No overblown promises, no hollow corporate-speak.
+- An expiration date on the header creates gentle time pressure — always include one.
 
-## نمونه‌ی مرجع
+## Reference example
 
-`references/example-proposal.md` یک پروپوزالِ کاملِ واقعی (پروژه‌ی وب‌سایت + دستیار هوشمند) است. برای الگوی ساختار، لحن، و سطحِ جزئیات به آن نگاه کن — اما محتوا را کورکورانه کپی نکن؛ آن را با وضعیتِ واقعیِ کلاینتِ فعلی جایگزین کن.
+`references/example-proposal.md` is a complete, realistic example proposal (website + AI assistant project). Use it as a model for structure, tone, and level of detail — but don't copy the content blindly; replace it with your current client's actual situation.

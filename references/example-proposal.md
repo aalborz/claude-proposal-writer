@@ -1,166 +1,166 @@
-# پروپوزال طراحی و راه‌اندازی وب‌سایت و دستیار هوشمند چندکاناله
+# Website and Multi-Channel AI Assistant Design & Launch Proposal
 
-> این یک نمونه‌ی کاملِ یک پروپوزالِ واقعی است — می‌توانی آن را به‌عنوان الگو برای پروژه‌های خودت استفاده کنی.
-> بخش‌های داخلِ [ ] را با اطلاعاتِ خودت و کلاینتت جایگزین کن.
+> This is a complete example of a real proposal — you can use it as a template for your own projects.
+> Replace the parts in [ ] with your own and your client's information.
 
-**آرکان** | مشاور استراتژی و رشد کسب‌وکار
+**Meridian Growth Partners** | Strategy & Business Growth Consultancy
 
-| مورد | توضیح |
+| Item | Detail |
 |---|---|
-| تهیه‌شده برای | شرکت آرکان — جناب آقای بابک آریان‌فر (بنیان‌گذار و مدیرعامل) |
-| تهیه‌کننده | [نام شما] — [نام برند / شرکت شما] |
-| تاریخ | [تاریخ] |
-| شماره‌ی پروپوزال | AR-۱۴۰۳-۰۱ |
-| اعتبار این پیشنهاد | تا ۱۴ روز از تاریخ ارسال |
+| Prepared for | Meridian Growth Partners — Mr. Daniel Ashford (Founder & CEO) |
+| Prepared by | [Your Name] — [Your Brand / Company] |
+| Date | [Date] |
+| Proposal number | MG-2026-01 |
+| Offer valid | 14 days from send date |
 
 ---
 
-## ۱. خلاصه‌ی اجرایی
+## 1. Executive Summary
 
-آرکان به‌عنوان یک بوتیک مشاوره‌ی استراتژی، بازدیدکنندگان علاقه‌مند زیادی دارد که پیش از پر کردن «فرم درخواست مشاوره»، سؤال‌هایی در ذهنشان است: آرکان دقیقاً چه می‌کند، فرایند همکاری چگونه است، و آیا برای وضعیت آن‌ها مناسب است. پاسخ دستی به این سؤال‌ها وقت تیم دوازده‌نفره‌ی مشاوران را می‌گیرد و بخشی از بازدیدکنندگان بدون تبدیل‌شدن به سرنخ، سایت را ترک می‌کنند.
+As a boutique strategy consultancy, Meridian Growth Partners gets a lot of interested visitors who have questions before filling out the "request a consultation" form: what exactly Meridian does, how the engagement process works, and whether it's the right fit for their situation. Answering these questions manually eats into the time of a twelve-person consulting team, and some visitors leave the site without ever becoming a lead.
 
-ما یک وب‌سایت حرفه‌ای و هم‌خوان با برند آرکان، به‌همراه یک «دستیار هوشمند» طراحی و راه‌اندازی می‌کنیم که ۲۴ ساعته و تنها بر پایه‌ی محتوای رسمی آرکان، به سؤال‌های بازدیدکنندگان پاسخ می‌دهد، آن‌ها را در مسیر درست هدایت می‌کند و در نهایت به ثبت «درخواست مشاوره» می‌رساند. نتیجه: نرخ تبدیل بالاتر، پاسخ‌گویی بی‌وقفه، و آزاد شدن وقت مشاوران از سؤال‌های تکراری.
-
----
-
-## ۲. درک ما از وضعیت آرکان
-
-در بررسی و گفت‌وگوی مشترک، این نکات مشخص شد:
-
-- تنها مدلِ تبدیلِ سایت، رساندن بازدیدکننده‌ی واجد شرایط به پر کردن فرم درخواست مشاوره است؛ سایت فروش یا تراکنش آنلاینی ندارد.
-- بازدیدکنندگان پیش از تصمیم، سؤال‌های تکراری دارند: دامنه‌ی خدمات، متدولوژی «چهار رکن»، محل همکاری و اینکه آیا آرکان با شرایط آن‌ها جور است.
-- پاسخ‌گوییِ دستی به این سؤال‌ها زمان‌بر است و در ساعات غیرکاری اصلاً انجام نمی‌شود، همین باعث از دست رفتن بخشی از سرنخ‌ها می‌شود.
-- برای آرکان، اعتماد و پختگیِ برند حیاتی است؛ هر راه‌حل باید با ارزش‌هایی مثل «صداقت پیش از قرارداد» هم‌خوان باشد و هرگز وعده‌ی اغراق‌آمیز ندهد.
+We'll design and launch a professional website matching Meridian's brand, along with an "AI assistant" that answers visitor questions 24/7 based solely on Meridian's official content, guides them toward the right next step, and ultimately drives them to submit a "request a consultation." Result: a higher conversion rate, uninterrupted responsiveness, and consultants freed from repetitive questions.
 
 ---
 
-## ۳. راه‌حل پیشنهادی
+## 2. Our Understanding of Meridian's Situation
 
-راه‌حل ما دو بخش هم‌پیوند دارد که روی یک زیرساخت مشترک (Next.js و Supabase) سوار می‌شوند و معماری آن بر پایه‌ی اصل **«یک مغز، چند کانال»** است: یک هسته‌ی مرکزی همه‌ی منطق گفتگو و پاسخ‌دهی را مدیریت می‌کند و کانال‌های مختلف فقط لایه‌ی نمایش‌اند.
+Through our conversations and review, the following became clear:
 
-### بخش اول — وب‌سایت رسمی آرکان
-- طراحی و ساخت وب‌سایت واکنش‌گرا با پشتیبانی کامل راست‌به‌چپ (RTL) و فونت‌های فارسی، هم‌خوان با برند گاید آرکان.
-- بخش‌های اصلی: معرفی، خدمات، متدولوژی چهار رکن، فرایند همکاری، اعتبار و اعتماد، و فرم درخواست مشاوره.
-- اتصال فرم به پایگاه داده‌ی Supabase و اطلاع‌رسانی خودکار سرنخ‌های جدید.
-
-### بخش ب — دستیار هوشمند «مشاور آرکان» (چندکاناله)
-- دستیاری مبتنی بر معماری RAG که فقط از محتوای رسمی و تأییدشده‌ی آرکان پاسخ می‌دهد و چیزی از خودش نمی‌سازد (کنترل ضدِ توهم).
-- سه کانال از یک مغز مشترک: صفحه‌ی چت کامل روی سایت، ویجت قابل‌جاسازی (embeddable) در گوشه‌ی صفحه، و بات تلگرام با قابلیت ارسال پیام انبوه (broadcast).
-- هدایت گفتگو به سمت ثبت «درخواست مشاوره» و ثبت خودکار اطلاعات بازدیدکننده‌ی علاقه‌مند به‌عنوان سرنخ.
-- پنل مدیریت برای آرکان: مدیریت پایگاه دانش، انتخاب و تنظیم مدل، نسخه‌بندی پرامپت، مشاهده‌ی گفتگوها و سرنخ‌ها، و ثبت فعالیت‌ها (audit log).
+- The site's only conversion model is getting a qualified visitor to fill out the consultation request form; there's no e-commerce or online transactions.
+- Visitors have recurring questions before deciding: scope of services, the "Four Pillars" methodology, how engagements work, and whether Meridian fits their situation.
+- Answering these manually is time-consuming and doesn't happen at all outside business hours, which causes some leads to be lost.
+- Trust and brand maturity are critical for Meridian; any solution must align with values like "honesty before contract" and never make exaggerated promises.
 
 ---
 
-## ۴. دامنه‌ی کار — شامل و غیرشامل
+## 3. Proposed Solution
 
-**شامل این پروژه:**
-- طراحی و ساخت کامل وب‌سایت (بخش اول).
-- طراحی، آموزش و راه‌اندازی دستیار هوشمند در سه کانال (بخش ب).
-- پنل مدیریت و آموزش تیم آرکان برای کار با آن.
-- ارزیابی کیفیت پاسخ‌ها با «مجموعه‌ی طلایی» پیش از راه‌اندازی نهایی.
+Our solution has two connected parts built on a shared infrastructure (Next.js and Supabase), architected around the principle of **"one brain, many channels"**: a central core manages all conversation and response logic, while each channel is just a presentation layer.
 
-**خارج از این پروژه (در صورت نیاز، به‌صورت پروژه‌ی جداگانه):**
-- تولید مستمر محتوای بازاریابی و مدیریت شبکه‌های اجتماعی.
-- پاسخ‌گویی انسانی روزانه پس از تحویل و بهره‌برداری.
-- توسعه‌ی یکپارچگی با سیستم‌های داخلی دیگر (CRM اختصاصی و مانند آن).
+### Part One — Meridian's Official Website
+- Design and build a responsive website with clean, professional branding matching Meridian's brand guide.
+- Core sections: about, services, the Four Pillars methodology, engagement process, credibility and trust, and the consultation request form.
+- Connect the form to a Supabase database with automatic notification of new leads.
 
----
-
-## ۵. رویکرد و متدولوژی ما
-
-کیفیت این نوع سیستم به فرایند ساخت آن بستگی دارد. مسیر ما این است:
-
-- **کشف و جمع‌آوری محتوا:** استخراج دقیق خدمات، متدولوژی و سؤال‌های پرتکرار واقعی مشتریان آرکان.
-- **ساخت پایگاه دانش:** پردازش و ساختاردهی محتوا تا دستیار پاسخ‌های درست و مستند بدهد.
-- **ساخت و اتصال کانال‌ها:** پیاده‌سازی مغز مرکزی و سپس سه کانال روی آن.
-- **ارزیابی با «مجموعه‌ی طلایی»:** مجموعه‌ای از پرسش‌های واقعی برای سنجش دقت و کیفیت پاسخ‌ها بر اساس شاخص‌های مشخص، پیش از راه‌اندازی. این مرحله، تضمین کیفیت شماست.
-- **راه‌اندازی و آموزش:** انتقال کامل به تیم آرکان به‌همراه آموزش کار با پنل.
+### Part Two — "Meridian Advisor" AI Assistant (multi-channel)
+- An assistant built on a RAG architecture that answers only from Meridian's official, approved content and never invents anything (anti-hallucination control).
+- Three channels from one shared brain: a full chat page on the site, an embeddable widget in the corner of the page, and a Telegram bot with broadcast messaging capability.
+- Guides conversations toward submitting a "consultation request" and automatically logs the interested visitor's information as a lead.
+- An admin panel for Meridian: knowledge base management, model selection and configuration, prompt versioning, viewing conversations and leads, and an activity audit log.
 
 ---
 
-## ۶. مراحل و زمان‌بندی
+## 4. Scope of Work — Included and Excluded
 
-| مرحله | کار | مدت تقریبی |
+**Included in this project:**
+- Full design and build of the website (Part One).
+- Design, training, and launch of the AI assistant across three channels (Part Two).
+- Admin panel plus training for Meridian's team on how to use it.
+- Quality evaluation of responses using a "golden set" before final launch.
+
+**Outside this project (available as a separate project if needed):**
+- Ongoing marketing content production and social media management.
+- Daily human support after delivery and go-live.
+- Integration with other internal systems (a dedicated CRM, etc.).
+
+---
+
+## 5. Our Approach and Methodology
+
+The quality of a system like this depends on how it's built. Our path:
+
+- **Discovery and content gathering:** precisely capture services, methodology, and Meridian's clients' real, frequently asked questions.
+- **Building the knowledge base:** process and structure content so the assistant gives correct, documented answers.
+- **Building and connecting the channels:** implement the central brain, then the three channels on top of it.
+- **Evaluation with a "golden set":** a set of real questions to measure accuracy and quality against defined metrics before launch. This step is your quality guarantee.
+- **Launch and training:** full handover to Meridian's team along with training on using the panel.
+
+---
+
+## 6. Phases and Timeline
+
+| Phase | Task | Approx. duration |
 |---|---|---|
-| ۱ | کشف و جمع‌آوری محتوا و اطلاعات | ۳ تا ۴ روز |
-| ۲ | طراحی و ساخت وب‌سایت | حدود ۲.۵ هفته |
-| ۳ | ساخت مغز RAG و پایگاه دانش | حدود ۲ هفته |
-| ۴ | ساخت سه کانال و پنل مدیریت | حدود ۱.۵ هفته |
-| ۵ | ارزیابی با مجموعه‌ی طلایی و بهبود | ۴ روز |
-| ۶ | راه‌اندازی نهایی و آموزش تیم | ۲ روز |
+| 1 | Discovery and content/info gathering | 3-4 days |
+| 2 | Website design and build | ~2.5 weeks |
+| 3 | Building the RAG brain and knowledge base | ~2 weeks |
+| 4 | Building the three channels and admin panel | ~1.5 weeks |
+| 5 | Evaluation with golden set and refinement | 4 days |
+| 6 | Final launch and team training | 2 days |
 
-**مدت کل تقریبی: حدود ۶ تا ۷ هفته (برخی مراحل هم‌پوشانی دارند).**
-
----
-
-## ۷. نتایج و ارزش مورد انتظار
-
-- افزایش نرخ تبدیل بازدیدکننده به «درخواست مشاوره» با پاسخ‌گوییِ بی‌درنگ به سؤال‌های او.
-- پاسخ‌گوییِ ۲۴ ساعته در همه‌ی کانال‌ها، حتی خارج از ساعت کاری.
-- آزاد شدن وقت مشاوران از سؤال‌های تکراری و تمرکزشان روی مشاوره‌ی ارزش‌آفرین.
-- حضور برند حرفه‌ای، منسجم و هم‌خوان با ارزش‌های آرکان در همه‌ی نقاط تماس.
-
-> حتی اگر این سیستم فقط چند «درخواست مشاوره‌ی» اضافه در ماه ایجاد کند، با توجه به ارزش هر قرارداد مشاوره، سرمایه‌گذاری آن در همان ماه‌های نخست جبران می‌شود.
+**Total estimated duration: about 6-7 weeks (some phases overlap).**
 
 ---
 
-## ۸. نگهداری داده، امنیت و حریم خصوصی
+## 7. Expected Results and Value
 
-- دستیار تنها از محتوای رسمی و تأییدشده‌ی آرکان تغذیه می‌شود و فقط بر پایه‌ی همان پاسخ می‌دهد؛ این کار جلوی پاسخ‌های نادرست را می‌گیرد.
-- داده‌ها و پایگاه دانش در پایگاه داده‌ی اختصاصیِ پروژه (Supabase) نگهداری می‌شوند و در اختیار آرکان قرار می‌گیرند.
-- کلیدهای دسترسی به‌صورت امن ذخیره می‌شوند و پنل مدیریت شامل کنترل نگهداری داده، حریم خصوصی و ثبت فعالیت‌هاست.
+- Higher visitor-to-"consultation request" conversion through instant answers to their questions.
+- 24/7 responsiveness across all channels, even outside business hours.
+- Consultants freed from repetitive questions to focus on high-value advisory work.
+- A professional, consistent brand presence aligned with Meridian's values at every touchpoint.
+
+> Even if this system only generates a few extra "consultation requests" per month, given the value of each consulting engagement, the investment pays for itself within the first few months.
 
 ---
 
-## ۹. سرمایه‌گذاری و شرایط پرداخت
+## 8. Data Retention, Security, and Privacy
 
-| بخش | مبلغ (تومان) |
+- The assistant is fed only from Meridian's official, approved content and responds strictly from it; this prevents incorrect answers.
+- Data and the knowledge base are stored in the project's dedicated database (Supabase) and remain under Meridian's control.
+- Access keys are stored securely, and the admin panel includes data retention controls, privacy settings, and activity logging.
+
+---
+
+## 9. Investment and Payment Terms
+
+| Item | Amount (USD) |
 |---|---|
-| طراحی و ساخت وب‌سایت | ۴۵٬۰۰۰٬۰۰۰ |
-| دستیار هوشمند چندکاناله + پنل مدیریت | ۱۳۵٬۰۰۰٬۰۰۰ |
-| **جمع هزینه‌ی راه‌اندازی (یک‌بار)** | **۱۸۰٬۰۰۰٬۰۰۰** |
-| پشتیبانی و به‌روزرسانی ماهانه (اختیاری) | ۱۲٬۰۰۰٬۰۰۰ در ماه |
+| Website design and build | $4,500 |
+| Multi-channel AI assistant + admin panel | $13,500 |
+| **Total launch cost (one-time)** | **$18,000** |
+| Monthly support and updates (optional) | $1,200/month |
 
-**شرایط پرداخت: ۵۰٪ هنگام شروع، ۲۵٪ در میانه‌ی پروژه، ۲۵٪ هنگام تحویل.**
+**Payment terms: 50% at start, 25% at project midpoint, 25% at delivery.**
 
-هزینه‌های جاری زیرساخت (سرور/هاست و مصرف API مدل‌های هوش مصنوعی) جدا از مبالغ بالا و بر عهده‌ی کارفرماست؛ تخمین اولیه حدود ۵ تا ۱۵ میلیون تومان در ماه بسته به حجم مصرف.
-
----
-
-## ۱۰. آنچه از شما نیاز داریم
-
-- محتوای خدمات، متدولوژی چهار رکن و فهرست سؤال‌های پرتکرار مشتریان.
-- دسترسی لازم به دامنه/هاست و توکن بات تلگرام.
-- دارایی‌های برند (لوگو، رنگ‌ها) و نمونه‌ای از لحن دلخواه آرکان.
-- یک نفر از تیم آرکان به‌عنوان رابط برای پاسخ به سؤال‌ها و تأییدها.
+Ongoing infrastructure costs (hosting and AI model API usage) are separate from the amounts above and are the client's responsibility; initial estimate is roughly $200-$600/month depending on usage volume.
 
 ---
 
-## ۱۱. درباره‌ی ما
+## 10. What We Need From You
 
-ما در [نام برند] روی طراحی و راه‌اندازی راه‌حل‌های عملیِ هوش مصنوعی برای کسب‌وکارها تمرکز داریم — راه‌حل‌هایی که نتیجه‌ی ملموس می‌سازند، نه صرفاً فناوریِ پیچیده. رویکرد ما نتیجه‌محور، شفاف و مبتنی بر معیارهای کیفیِ قابل‌سنجش است.
-
----
-
-## ۱۲. شرایط و اعتبار پیشنهاد
-
-- این پیشنهاد تا ۱۴ روز از تاریخ ارسال معتبر است.
-- تا دو نوبت بازنگری در محدوده‌ی توافق‌شده رایگان است.
-- پس از تسویه‌ی کامل، وب‌سایت و سیستمِ راه‌اندازی‌شده متعلق به آرکان است.
-- محرمانگیِ اطلاعات هر دو طرف در طول همکاری رعایت می‌شود.
+- Content on services, the Four Pillars methodology, and a list of clients' frequently asked questions.
+- Necessary access to the domain/host and the Telegram bot token.
+- Brand assets (logo, colors) and a sample of the desired tone for Meridian.
+- One person from Meridian's team as a point of contact for questions and approvals.
 
 ---
 
-## ۱۳. قدم بعدی و پذیرش
+## 11. About Us
 
-برای شروع، کافی است این پیشنهاد را تأیید کنید و پیش‌پرداخت را واریز کنید تا از همان روز کار را آغاز کنیم. اگر نکته‌ای برای تنظیم دقیق‌تر دامنه‌ی کار دارید، یک تماس کوتاه بگذاریم و با هم نهایی‌اش کنیم.
+At [Your Brand], we focus on designing and launching practical AI solutions for businesses — solutions that create tangible results, not just sophisticated technology. Our approach is outcome-driven, transparent, and grounded in measurable quality standards.
 
-| امضا و تأیید کارفرما (آرکان) — تاریخ | امضا مشاور — تاریخ |
+---
+
+## 12. Terms and Offer Validity
+
+- This proposal is valid for 14 days from the send date.
+- Up to two rounds of revisions within the agreed scope are free.
+- Upon full payment, the website and launched system belong to Meridian.
+- Confidentiality of both parties' information is maintained throughout the engagement.
+
+---
+
+## 13. Next Step and Acceptance
+
+To get started, simply approve this proposal and send the deposit so we can begin that same day. If you'd like to fine-tune the scope before approving, let's set up a short call and finalize it together.
+
+| Client signature & approval (Meridian) — Date | Consultant signature — Date |
 |---|---|
-| ⸻ | ⸻ |
+| — | — |
 
-**تماس:** [ایمیل / شماره تماس شما] — در انتظار همکاری با شما.
+**Contact:** [your email / phone] — looking forward to working with you.
 
 ---
 
-📚 Careerpreneur Academy — هفته ششم، دوره مشاور هوش مصنوعی
+📚 Careerpreneur Academy — Week 6, AI Consultant course
